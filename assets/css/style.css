@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --header-bg: #10375c;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -10,3 +14,91 @@ body {
   font-family: "Sora", serif;
   font-size: 1.6rem;
 }
+
+/* COMMON - CSS DÙNG CHUNG CHO DỰ ÁN */
+
+.container {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 205px;
+  line-height: 60px;
+  border-radius: 999px;
+  background: #2e80ce;
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* HEADER - CSS */
+
+.header {
+  /* Cao 100% viewport height - khung nhìn của người dùng */
+  min-height: 100vh;
+  padding-top: 30px;
+  background: var(--header-bg);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__list {
+  display: flex;
+}
+
+.action__login,
+.navbar__link {
+  /* dùng padding --> tăng tương tác của người dùng */
+  padding: 8px 21px;
+  color: #c9d2da;
+  text-align: center;
+  font-size: 1.6 rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  text-shadow: 1px 0 0 currentColor;
+  color: #fff;
+}
+
+.navbar__link--active::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  right: 8px;
+  top: -3px;
+}
+
+.action__signup {
+  font-size: 1.6rem;
+  min-width: 144px;
+  line-height: 44px;
+}
+
+/* MAIN - CSS */
+
+/* FOOTER - CSS */
